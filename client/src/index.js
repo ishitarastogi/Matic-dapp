@@ -2,11 +2,15 @@
 
 const displayGreeting = async (greeting, contract) => {
   greeting = await contract.methods.sayHello().call();
+  console.log(greeting);
+  console.log( contract)
+
   $("h2").html(greeting);
 };
 
 const updateGreeting = (greeting, contract, accounts) => {
   let input;
+  console.log(accounts[0]);
   $("#input").on("change", (e) => {
     input = e.target.value;
   });

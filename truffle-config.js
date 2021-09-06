@@ -1,5 +1,6 @@
 const HDWalletProvider = require('@truffle/hdwallet-provider');
-const MNENOMIC=""
+const path = require('path');
+const MNENOMIC="broom clump orphan negative brave unique end win axis taste panda foam"
 module.exports = {
   contracts_build_directory: path.join(__dirname, "client/contracts"),
   networks: {

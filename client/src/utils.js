@@ -17,6 +17,8 @@ const getWeb3 = () => {
   });
 };
 
+
+
 const getContract = async (web3) => {
   const data = await $.getJSON("./contracts/Greeting.json");
 
