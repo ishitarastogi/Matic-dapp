@@ -1,6 +1,5 @@
 const HDWalletProvider = require('@truffle/hdwallet-provider');
 const path = require('path');
-const MNENOMIC="broom clump orphan negative brave unique end win axis taste panda foam"
 module.exports = {
   contracts_build_directory: path.join(__dirname, "client/contracts"),
   networks: {
@@ -10,7 +9,7 @@ module.exports = {
       network_id: "*",       // Any network (default: none)
     },
     matic: {
-      provider: () => new HDWalletProvider(MNENOMIC, `https://rpc-mumbai.matic.today`),
+      provider: () => new HDWalletProvider(process.env.MNENOMIC, `https://rpc-mumbai.matic.today`),
       network_id: 80001,
       confirmations: 2,
       timeoutBlocks: 200,
